@@ -21,7 +21,7 @@ end
 def print(students)
   i = 0
   while i < students.length
-    puts "#{i+1}. #{students[i][:name]} (#{students[i][:cohort]} cohort)(#{students[i][:hobbies]} - hobbie)(#{students[i][:cob]} - Country Of Birth)"
+    puts "#{i+1}. #{students[i][:name]} (#{students[i][:cohort]} cohort)\n(#{students[i][:hobbies]} - hobbie)(#{students[i][:cob]} - Country Of Birth)"
     i += 1
   end
 end
