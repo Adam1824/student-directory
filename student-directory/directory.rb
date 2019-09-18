@@ -1,16 +1,16 @@
 # let's put all students into an array
 students = [
-  {name: "Dr. Hannibal Lecter", cohort: :november},
-  {name: "Darth Vader", cohort: :november},
-  {name: "Nurse Ratched", cohort: :november},
-  {name: "Michael Corleone", cohort: :november},
-  {name: "Alex DeLarge", cohort: :november},
-  {name: "The Wicked Witch of the West", cohort: :november},
-  {name: "Terminator", cohort: :november},
-  {name: "Freddy Krueger", cohort: :november},
-  {name: "The Joker", cohort: :november},
-  {name: "Joffrey Baratheon", cohort: :november},
-  {name: "Norman Bates", cohort: :november}
+  {name: "Dr. Hannibal Lecter", cohort: :november, hobbies: "Football", cob: "UK"},
+  {name: "Darth Vader", cohort: :november, hobbies: "programming", cob: "UK"},
+  {name: "Nurse Ratched", cohort: :november, hobbies: "Football", cob: "UK"},
+  {name: "Michael Corleone", cohort: :november, hobbies: "Gaming", cob: "UK"},
+  {name: "Alex DeLarge", cohort: :november, hobbies: "Gaming", cob: "UK"},
+  {name: "The Wicked Witch of the West", cohort: :november, hobbies: "programming", cob: "UK"},
+  {name: "Terminator", cohort: :november, hobbies: "programming", cob: "UK"},
+  {name: "Freddy Krueger", cohort: :november, hobbies: "Gaming", cob: "UK"},
+  {name: "The Joker", cohort: :november, hobbies: "Football", cob: "UK"},
+  {name: "Joffrey Baratheon", cohort: :november, hobbies: "Gaming", cob: "UK"},
+  {name: "Norman Bates", cohort: :november, hobbies: "Gaming", cob: "UK"}
 ]
 
 def print_header
@@ -21,7 +21,7 @@ end
 def print(students)
   i = 0
   while i < students.length
-    puts "#{i+1}. #{students[i][:name]} (#{students[i][:cohort]} cohort)"
+    puts "#{i+1}. #{students[i][:name]} (#{students[i][:cohort]} cohort)(#{students[i][:hobbies]} - hobbie)(#{students[i][:cob]} - Country Of Birth)"
     i += 1
   end
 end
