@@ -19,9 +19,10 @@ def print_header
 end
 
 def print(students)
-  students.each do |student|
-    puts "#{student[:name]} (#{student[:cohort]} cohort)"
-  end
+  students.each_with_index {|student, i|
+    if student[:name][0].include?("D")
+      puts "#{i+1}. #{student[:name]} (#{student[:cohort]} cohort)"
+    end}
 end
 
 def print_footer(names)
@@ -48,7 +49,7 @@ def input_students
 end
 
 #nothing happens until we call the methods
-students = input_students
+#students = input_students
 print_header
 print(students)
 print_footer(students)
