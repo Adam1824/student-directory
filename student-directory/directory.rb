@@ -19,10 +19,21 @@ def print_header
 end
 
 def print(students)
-  i = 0
-  while i < students.length
-    puts "#{i+1}. #{students[i][:name].center(30)} \n #{students[i][:cohort].to_s.center(30)} - cohort\n#{students[i][:hobbies].center(30)} - hobbie\n#{students[i][:cob].center(30)} - Country Of Birth"
-    i += 1
+  cohort_list = []
+  students.each do |student|
+    cohort = student[:cohort].to_s
+    if !(cohort_list.include?(cohort))
+      cohort_list.push(cohort)
+    end
+  end
+  puts cohort_list
+  cohort_list.each do |cohort|
+    puts "Students from the #{cohort} cohort:"
+      students.each do |student|
+        if student[:cohort].to_s.include?(cohort)
+          puts student[:name]
+        end
+      end
   end
 end
 
@@ -61,5 +72,5 @@ end
 #nothing happens until we call the methods
 students = input_students
 #print_header
-#print(students)
+print(students)
 #print_footer(students)
