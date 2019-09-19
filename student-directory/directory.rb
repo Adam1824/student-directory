@@ -1,16 +1,16 @@
 # let's put all students into an array
 students = [
-  {name: "Dr. Hannibal Lecter", cohort: :november, hobbies: "Football", cob: "UK"},
-  {name: "Darth Vader", cohort: :november, hobbies: "programming", cob: "UK"},
-  {name: "Nurse Ratched", cohort: :november, hobbies: "Football", cob: "UK"},
-  {name: "Michael Corleone", cohort: :november, hobbies: "Gaming", cob: "UK"},
-  {name: "Alex DeLarge", cohort: :november, hobbies: "Gaming", cob: "UK"},
-  {name: "The Wicked Witch of the West", cohort: :november, hobbies: "programming", cob: "UK"},
-  {name: "Terminator", cohort: :november, hobbies: "programming", cob: "UK"},
-  {name: "Freddy Krueger", cohort: :november, hobbies: "Gaming", cob: "UK"},
-  {name: "The Joker", cohort: :november, hobbies: "Football", cob: "UK"},
-  {name: "Joffrey Baratheon", cohort: :november, hobbies: "Gaming", cob: "UK"},
-  {name: "Norman Bates", cohort: :november, hobbies: "Gaming", cob: "UK"}
+  {name: "Dr. Hannibal Lecter", cohort: "november", hobbies: "Football", cob: "UK"},
+  {name: "Darth Vader", cohort: "november", hobbies: "programming", cob: "UK"},
+  {name: "Nurse Ratched", cohort: "november", hobbies: "Football", cob: "UK"},
+  {name: "Michael Corleone", cohort: "november", hobbies: "Gaming", cob: "UK"},
+  {name: "Alex DeLarge", cohort: "november", hobbies: "Gaming", cob: "UK"},
+  {name: "The Wicked Witch of the West", cohort: "november", hobbies: "programming", cob: "UK"},
+  {name: "Terminator", cohort: "november", hobbies: "programming", cob: "UK"},
+  {name: "Freddy Krueger", cohort: "november", hobbies: "Gaming", cob: "UK"},
+  {name: "The Joker", cohort: "november", hobbies: "Football", cob: "UK"},
+  {name: "Joffrey Baratheon", cohort: "november", hobbies: "Gaming", cob: "UK"},
+  {name: "Norman Bates", cohort: "november", hobbies: "Gaming", cob: "UK"}
 ]
 
 def print_header
@@ -21,7 +21,7 @@ end
 def print(students)
   i = 0
   while i < students.length
-    puts "#{i+1}. #{students[i][:name]} (#{students[i][:cohort]} cohort)\n(#{students[i][:hobbies]} - hobbie)(#{students[i][:cob]} - Country Of Birth)"
+    puts "#{i+1}. #{students[i][:name].center(30)} \n #{students[i][:cohort].center(30)} - cohort\n#{students[i][:hobbies].center(30)} - hobbie\n#{students[i][:cob].center(30)} - Country Of Birth"
     i += 1
   end
 end
