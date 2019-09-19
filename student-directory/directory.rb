@@ -26,7 +26,6 @@ def print(students)
       cohort_list.push(cohort)
     end
   end
-  puts cohort_list
   cohort_list.each do |cohort|
     puts "Students from the #{cohort} cohort:"
       students.each do |student|
@@ -59,12 +58,18 @@ def input_students
     cohort = cohort.to_sym
     #add the student hash to the array
     students << {name: name, cohort: cohort}
-    puts "Now we have #{students.count} students"
+    if students.count == 1
+      puts "Now we have 1 student"
+    else
+      puts "Now we have #{students.count} students"
+    end
     #get another name from the user
     name = gets.chomp
     cohort = gets.chomp
   end
-  puts students
+  if students.count == 0
+    puts "We have no students"
+  end
   #return the array of students
   return students
 end
